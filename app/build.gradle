@@ -54,9 +54,6 @@ android {
 
 dependencies {
 
-    // OpenCSV
-    implementation 'com.opencsv:opencsv:5.5.2'
-
 //    Nav
     def nav_version = "2.5.3"
     implementation "androidx.navigation:navigation-compose:$nav_version"
