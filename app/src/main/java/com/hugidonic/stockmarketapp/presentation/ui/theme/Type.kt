@@ -1,4 +1,4 @@
-package com.hugidonic.stockmarketapp.ui.theme
+package com.hugidonic.stockmarketapp.presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
