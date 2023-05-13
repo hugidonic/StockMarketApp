@@ -1,7 +1,7 @@
 package com.hugidonic.domain.models
 
-sealed class Resource<T>(data: T? = null, message: String? = null) {
-    class Success<T>(data: T? = null): Resource<T>(data)
-    class Error<T>(message: String, data: T? = null): Resource<T>(message=message, data=data)
+sealed class Resource<T>(val data: T? = null, val message: String? = null) {
+    class Success<T>(data: T?): Resource<T>(data=data)
+    class Error<T>(message: String, data: T? = null): Resource<T>(data, message)
     class Loading<T>(val isLoading: Boolean = true): Resource<T>(data = null)
 }
