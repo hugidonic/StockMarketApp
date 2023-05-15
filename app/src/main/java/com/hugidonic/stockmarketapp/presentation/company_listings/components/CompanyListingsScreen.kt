@@ -20,11 +20,13 @@ import com.hugidonic.stockmarketapp.presentation.company_listings.state.CompanyL
 import com.hugidonic.stockmarketapp.presentation.company_listings.viewmodel.CompanyListingsViewModel
 import com.hugidonic.stockmarketapp.presentation.destinations.CompanyInfoScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-@Destination(start = true)
+@RootNavGraph(start = true)
+@Destination
 fun CompanyListingsScreen(
     navigator: DestinationsNavigator,
     viewModel: CompanyListingsViewModel = hiltViewModel()
