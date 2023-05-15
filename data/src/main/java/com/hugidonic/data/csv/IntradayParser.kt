@@ -9,8 +9,9 @@ import kotlinx.coroutines.withContext
 import java.io.InputStream
 import java.io.InputStreamReader
 import java.time.LocalDateTime
+import javax.inject.Inject
 
-class IntradayParser: CSVParser<IntradayInfoModel> {
+class IntradayParser @Inject constructor(): CSVParser<IntradayInfoModel> {
     override suspend fun parse(stream: InputStream): List<IntradayInfoModel> {
         val csvReader = CSVReader(InputStreamReader(stream))
 
