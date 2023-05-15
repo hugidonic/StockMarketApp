@@ -57,7 +57,7 @@ fun StockChart(
 
         // region Y axys texts
         val priceStep = (upperValue - lowerValue) / 5f
-        (0..5).forEach { i ->
+        (0..4).forEach { i ->
             drawContext.canvas.nativeCanvas.apply {
                 drawText(
                     round(lowerValue + i * priceStep).toString(),
