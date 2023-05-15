@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.hugidonic.stockmarketapp.presentation.company_listings.state.CompanyListingsEvent
 import com.hugidonic.stockmarketapp.presentation.company_listings.viewmodel.CompanyListingsViewModel
+import com.hugidonic.stockmarketapp.presentation.destinations.CompanyInfoScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
@@ -69,7 +70,7 @@ fun CompanyListingsScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
-                            TODO("navigate to company info screen")
+                            navigator.navigate(CompanyInfoScreenDestination(company.symbol))
                         }
                         .padding(16.dp)
                 )
